@@ -1,0 +1,578 @@
+Settings As screen:
+    BackgroundImage: ='termbuddy-background3'
+    Fill: =Color.White
+    ImagePosition: =ImagePosition.Fill
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    "'Analytcs Main Container_2' As groupContainer.horizontalAutoLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutGap: =nfTheming.layoutGap
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =nfTheming.layoutGap
+        PaddingLeft: =nfTheming.layoutGap
+        PaddingRight: =nfTheming.layoutGap
+        PaddingTop: =nfTheming.layoutGap
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =1
+
+        "'Analytcs Menu Container_2' As groupContainer.verticalAutoLayoutContainer":
+            DropShadow: =DropShadow.Light
+            Fill: =nfTheming.backFill
+            FillPortions: =0
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =nfTheming.layoutGap
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =nfTheming.menuWidth
+            LayoutMinWidth: =100
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =nfTheming.radius
+            RadiusBottomRight: =nfTheming.radius
+            RadiusTopLeft: =nfTheming.radius
+            RadiusTopRight: =nfTheming.radius
+            Width: =100
+            ZIndex: =2
+
+            "'Analytcs menu component_2' As 'menu component'":
+                currentScreen: =App.ActiveScreen.Name
+                iconColor: =nfColor.Accent2
+                iconColorCurrent: =nfColor.Primary
+                LayoutMinHeight: =640
+                LayoutMinWidth: =640
+                menuIcons: =nfMenu
+
+        "'Analytcs Prompt Container_2' As groupContainer.verticalAutoLayoutContainer":
+            Fill: =Color.Transparent
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =nfTheming.layoutGap
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =App.Width - 3 * nfTheming.layoutGap - 100
+            ZIndex: =3
+
+            "'Analytcs screen Header_2' As groupContainer.horizontalAutoLayoutContainer":
+                FillPortions: =0
+                Height: =100
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                "'Analytcs header component_2' As 'screen header'":
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+                    parentWidth: =Parent.Width
+                    screenName: =App.ActiveScreen.Name
+                    Width: ='Analytcs header component_2'.parentWidth
+
+            "'Analytcs screen - Main part_2' As groupContainer.verticalAutoLayoutContainer":
+                DropShadow: =DropShadow.Light
+                Fill: =nfTheming.backFill
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =nfTheming.radius
+                RadiusBottomRight: =nfTheming.radius
+                RadiusTopLeft: =nfTheming.radius
+                RadiusTopRight: =nfTheming.radius
+                Width: =Parent.Width
+                ZIndex: =5
+
+                Container3 As groupContainer.horizontalAutoLayoutContainer:
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =nfTheming.controlPadding
+                    PaddingLeft: =nfTheming.controlPadding
+                    PaddingRight: =nfTheming.controlPadding
+                    PaddingTop: =nfTheming.controlPadding
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =7
+
+                    Container4 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =2
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =nfTheming.controlPadding
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =1
+
+                        HtmlText1 As htmlViewer:
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =App.Theme.Font
+                            HtmlText: |-
+                                ="<header><h3><font color="& nfColor.Primary &">Installation Options for Term Buddy</font></h3></header>
+                                
+                                Term Buddy offers two deployment options, allowing organizations to choose the setup that best aligns with their security, cost management, and operational preferences.
+                                
+                                <header><h4><font color="& nfColor.Primary &">Option 1: Default Installation (Developer-Managed)</font></h4></header>
+                                
+                                This option provides a fully managed experience where Term Buddy operates within the developer's Azure environment, ensuring a quick and seamless setup.
+                                <li>Secure Connection: Term Buddy connects to the developer's Azure tenant through a secured, encrypted channel with PKI authentication, ensuring data privacy and integrity.
+                                <li>Zero Deployment Effort: No additional setup or configuration is required from the customer.
+                                <li>Cost Management: Azure OpenAI token costs are covered by the developer, eliminating the need for customers to manage AI consumption expenses.
+                                <li>Ideal for: Organizations seeking a hassle-free deployment with minimal administrative overhead.
+                                
+                                <header><h4><font color="& nfColor.Primary &">Option 2: Customer-Managed Installation</font></h4></header>
+                                
+                                For organizations requiring full control over their infrastructure, this option enables deployment within the customer’s Azure Entra ID tenant using Bicep deployment scripts provided by the developer.
+                                <li>Azure Subscription Required: An active Azure subscription is necessary to host Term Buddy and related services.
+                                <li>Enhanced Security: Azure Key Vault is used to securely store and manage sensitive data, such as API keys and authentication credentials.
+                                <li>Custom Deployment: The provided Bicep scripts automate the setup of all required Azure resources, ensuring a streamlined deployment process.
+                                <li>Ideal for: Organizations prioritizing security, compliance, and direct control over their Azure resources.
+                                
+                                For detailed deployment instructions, refer to the <font color="& nfColor.Primary &"><a href=https://github.com/Katerina-Chernevskaya/term-buddy>Term Buddy Installation Guide</a></font>.
+                                "
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =10
+                            ZIndex: =1
+
+                    Container5 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutOverflowY: =LayoutOverflow.Scroll
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        HtmlText2 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =App.Theme.Font
+                            HtmlText: ="<header><h3><font color="& nfColor.Primary &">Your Option</font></h3></header>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =10
+                            ZIndex: =1
+
+                        RadioGroupCanvas1 As Radio.pcfdataset:
+                            AlignInContainer: =AlignInContainer.Start
+                            DefaultSelectedItems: |-
+                                =LookUp(
+                                    nfAppData.demoModeValues,
+                                    mode = nfAppData.demoMode
+                                )
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =70
+                            Items: =nfAppData.demoModeValues
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =320
+                            Width: =320
+                            X: =0
+                            Y: =
+                            ZIndex: =2
+
+                            name2 As PowerApps_CoreControls_RadioGroupCanvasTemplate_dataField.textualColumn:
+                                FieldDisplayName: ="name"
+                                FieldName: ="name"
+                                FieldType: ="s"
+                                FieldVariantName: ="textualColumn"
+                                Order: =1
+                                ZIndex: =18
+
+                        HtmlText3 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =App.Theme.Font
+                            HtmlText: |-
+                                ="<header><h3><font color="& 
+                                If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    nfColor.Accent3,
+                                    nfColor.Primary 
+                                )
+                                &">Endpoint & Key Vault Connection</font></h3></header>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =10
+                            ZIndex: =3
+
+                        HtmlText4 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =App.Theme.Font
+                            HtmlText: |-
+                                ="<header><h4><font color="& 
+                                If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    nfColor.Accent3,
+                                    nfColor.Primary 
+                                )
+                                &">Model Endpoint Configuration</font></h4></header>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =10
+                            ZIndex: =4
+
+                        TextCanvas2 As Text:
+                            AlignInContainer: =AlignInContainer.Start
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            FontColor: |-
+                                =If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    nfColor.Accent2,
+                                    nfColor.Regular 
+                                )
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =13
+                            Text: ="Endpoint"
+                            VerticalAlign: =VerticalAlign.Bottom
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                        "TextInputCanvas1 As 'Text input'":
+                            AccessibleLabel: =
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Appearance: ='TextInputCanvas.Appearance'.Outline
+                            DisplayMode: |-
+                                =If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    DisplayMode.Disabled,
+                                    DisplayMode.Edit 
+                                )
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Placeholder: =
+                            Value: =nfAppData.endpointCMI.endpoint
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
+
+                        TextCanvas3 As Text:
+                            AlignInContainer: =AlignInContainer.Start
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            FontColor: |-
+                                =If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    nfColor.Accent2,
+                                    nfColor.Regular 
+                                )
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =13
+                            Text: ="Model"
+                            VerticalAlign: =VerticalAlign.Bottom
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =7
+
+                        "TextInputCanvas2 As 'Text input'":
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Appearance: ='TextInputCanvas.Appearance'.Outline
+                            DisplayMode: |-
+                                =If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    DisplayMode.Disabled,
+                                    DisplayMode.Edit 
+                                )
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Value: =nfAppData.endpointCMI.model
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =8
+
+                        HtmlText6 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            AutoHeight: =true
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =App.Theme.Font
+                            HtmlText: |-
+                                ="<header><h4><font color="& 
+                                If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    nfColor.Accent3,
+                                    nfColor.Primary 
+                                )
+                                &">Key Vault Configuration</font></h4></header>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =10
+                            ZIndex: =9
+
+                        TextCanvas4 As Text:
+                            AlignInContainer: =AlignInContainer.Start
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            FontColor: |-
+                                =If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    nfColor.Accent2,
+                                    nfColor.Regular 
+                                )
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =13
+                            Text: ="Azure Subscription Id"
+                            VerticalAlign: =VerticalAlign.Bottom
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =10
+
+                        "TextInputCanvas3 As 'Text input'":
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Appearance: ='TextInputCanvas.Appearance'.Outline
+                            DisplayMode: |-
+                                =If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    DisplayMode.Disabled,
+                                    DisplayMode.Edit 
+                                )
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Value: =nfAppData.keyVault.subscription
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =11
+
+                        TextCanvas5 As Text:
+                            AlignInContainer: =AlignInContainer.Start
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            FontColor: |-
+                                =If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    nfColor.Accent2,
+                                    nfColor.Regular 
+                                )
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =13
+                            Text: ="Resource Group Name"
+                            VerticalAlign: =VerticalAlign.Bottom
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =12
+
+                        "TextInputCanvas4 As 'Text input'":
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Appearance: ='TextInputCanvas.Appearance'.Outline
+                            DisplayMode: |-
+                                =If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    DisplayMode.Disabled,
+                                    DisplayMode.Edit 
+                                )
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Value: =nfAppData.keyVault.resource_group
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =13
+
+                        TextCanvas6 As Text:
+                            AlignInContainer: =AlignInContainer.Start
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            FontColor: |-
+                                =If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    nfColor.Accent2,
+                                    nfColor.Regular 
+                                )
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =13
+                            Text: ="Azure Key Vault Name"
+                            VerticalAlign: =VerticalAlign.Bottom
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =14
+
+                        "TextInputCanvas5 As 'Text input'":
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Appearance: ='TextInputCanvas.Appearance'.Outline
+                            DisplayMode: |-
+                                =If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    DisplayMode.Disabled,
+                                    DisplayMode.Edit 
+                                )
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Value: =nfAppData.keyVault.key_vault
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =15
+
+                        TextCanvas8 As Text:
+                            AlignInContainer: =AlignInContainer.Start
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            FontColor: |-
+                                =If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    nfColor.Accent2,
+                                    nfColor.Regular 
+                                )
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =13
+                            Text: ="Secret Name"
+                            VerticalAlign: =VerticalAlign.Bottom
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =16
+
+                        "TextInputCanvas6 As 'Text input'":
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Appearance: ='TextInputCanvas.Appearance'.Outline
+                            DisplayMode: |-
+                                =If(
+                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    DisplayMode.Disabled,
+                                    DisplayMode.Edit 
+                                )
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Value: =nfAppData.keyVault.secret
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =17
+
+                        Container6 As groupContainer.manualLayoutContainer:
+                            LayoutMinHeight: =20
+                            LayoutMinWidth: =250
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            ZIndex: =18
+
+                        "'Instruction screen - Update prompt button_2' As Button":
+                            Align: =Align.Center
+                            BasePaletteColor: =
+                            BorderRadius: =nfTheming.radius
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =Font.Lato
+                            FontSize: =16
+                            FontWeight: =FontWeight.Normal
+                            Height: =64
+                            Icon: ="Save"
+                            IconStyle: ='ButtonCanvas.IconStyle'.Outline
+                            Layout: ='ButtonCanvas.Layout'.TextOnly
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            OnSelect: |
+                                =IfError(
+                                    Patch(
+                                        'Environment Variable Values',
+                                        LookUp(
+                                            'Environment Variable Values',
+                                            'Environment Variable Definition'.'Schema Name' = "kch_demobackend"
+                                        ),
+                                        {
+                                            Value: 
+                                            RadioGroupCanvas1.Selected.mode
+                                        }
+                                    ),
+                                    Notify("Sorry, something went wrong. The selected option can't be saved.",NotificationType.Error),
+                                    If(
+                                        RadioGroupCanvas1.Selected.mode = "yes",
+                                        IfError(
+                                            Patch(
+                                                'Environment Variable Values',
+                                                LookUp(
+                                                    'Environment Variable Values',
+                                                    'Environment Variable Definition'.'Schema Name' = "kch_endpointsecret"
+                                                ),
+                                                {
+                                                    Value:
+                                                    "/subscriptions/" &
+                                                    TextInputCanvas3.Value &
+                                                    "/resourceGroups/" &
+                                                    TextInputCanvas4.Value &
+                                                    "/providers/Microsoft.KeyVault/vaults/" &
+                                                    TextInputCanvas5.Value &
+                                                    "/secrets/" &
+                                                    TextInputCanvas6.Value
+                                                }
+                                            ),
+                                            Notify("Sorry, something went wrong, settings can't be saved. Please check your permissions to Azure Key Vault.",NotificationType.Error),
+                                            Notify("All settings have been updated.",NotificationType.Information)
+                                        ),
+                                        Notify("All settings have been updated.",NotificationType.Information)
+                                    )
+                                );
+                            Text: ="Save"
+                            VerticalAlign: =VerticalAlign.Middle
+                            Width: =Len(Self.Text)*11 + 48
+                            X: =Parent.Width - Self.Width - nfTheming.controlPadding
+                            Y: =1
+                            ZIndex: =19
+
