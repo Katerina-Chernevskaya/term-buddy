@@ -185,7 +185,3 @@ This project is licensed under the [MIT License](./LICENSE).
 Built for [Hack Together 2023](https://github.com/microsoft/Powerful-Devs-Hack-Together) by **Katerina Chernevskaya** & **Artem Chernevskiy**.  
 
 🔗 **Stay connected & contribute!**  
-
----
-
-Would you like to add anything specific, such as screenshots, a demo link, or a deployment guide? 🚀
