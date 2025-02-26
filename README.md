@@ -31,7 +31,7 @@ Version|Date|Comments
 -------|----|--------
 1.0|February 26, 2025|Initial release
 
-## 🖥️ Features
+## 🚀 Features
 - 🔍 **AI-Powered Definitions** – Get concise, AI-generated explanations for complex terms.  
 - 🎯 **Quiz Generation** – Automatically generate quizzes to test knowledge.  
 - 📚 **Real-World Usage** – Understand terms in context with practical examples.  
@@ -134,7 +134,7 @@ For the full control over your infrastructure, the following prerequisites are r
 
 For detailed deployment instructions for this option (Customer-Managed Installation), see the [Deployment Instructions](./infra/infra-deployment.md) section.
 
-## 🚀 Minimal path to awesome
+## 🔧 Minimal path to awesome
 
 ### Using the solution zip
 
@@ -161,7 +161,7 @@ For detailed deployment instructions for this option (Customer-Managed Installat
 * When the solution has been imported successfully complete the following two activities:
     - **For Canvas app:** Share the `Term Buddy Admin Panel` app with target users.
     - **For Agent:** 
-        - Publish **Term Buddy** agent
+        - Publish `Term Buddy` agent
         - Add the agent to Teams channel
         - Share the agent with target users
 
@@ -182,6 +182,6 @@ We welcome contributions! To contribute:
 This project is licensed under the [MIT License](./LICENSE).  
 
 ## 🤝 **Acknowledgments**  
-Built for [Hack Together 2023](https://github.com/microsoft/Powerful-Devs-Hack-Together) by **Katerina Chernevskaya** & **Artem Chernevskiy**.  
+Built for [Hack Together 2025](https://github.com/microsoft/Powerful-Devs-Hack-Together) by **Katerina Chernevskaya** & **Artem Chernevskiy**.  
 
 🔗 **Stay connected & contribute!**  
