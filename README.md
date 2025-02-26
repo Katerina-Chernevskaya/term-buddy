@@ -136,7 +136,7 @@ For detailed deployment instructions for this option (Customer-Managed Installat
 
 ## 🔧 Minimal path to awesome
 
-### Using the solution zip
+### Import term-buddy solution
 
 * [Download](./solution/termbuddy-test.zip) the `.zip` from the `solution` folder
 
@@ -166,6 +166,48 @@ For detailed deployment instructions for this option (Customer-Managed Installat
         - Share the agent with target users
 
 * Run the application and start using Term Buddy!  
+
+### Import sample data (optional)
+
+This step is optional. The sample data includes dummy data for the Analytics page. You can import it to explore how the Admin Panel functions. Follow the steps below to import the sample data.
+
+* [Download](./sample-data/term-buddy-sampledata.zip) the `.zip` from the `sample-data` folder.
+
+* Make sure that you have version 1.40.4 (or newer) of [Power Platform CLI](https://learn.microsoft.com/power-platform/developer/cli/introduction).
+
+    To install the latest version:
+
+  ```bash
+  pac install latest
+  ```
+
+* See what tools are installed.
+
+  ```bash
+  pac tool list
+  ```
+
+* Download and launch the Configuration Migration Tool
+
+  ```bash
+  pac tool CMT
+  ```
+
+    ![pac-tool-cmt](./assets/pac-tool-cmt.png)
+
+* Select **Import data* and **Continue**
+    ![cm-login](./assets/cm-login.png)
+
+* Select **Office 365**, check **Display list of available organizations** and select **Login**
+
+* Select your target environment and select **Login**
+    ![cm-select-environment](./assets/cm-select-environment.png)
+
+* In the files **Zip File** select **term-buddy-sampledata.zip** downloaded earlier, and select **Import Data**.
+
+* Once the import process will be completed, select **Exit**.
+
+---
 
 ## 🎯 **Future Enhancements**  
 - Integration with Microsoft 365 for instant term lookup.  
