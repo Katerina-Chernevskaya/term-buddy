@@ -92,6 +92,8 @@ Term Buddy offers two deployment options, allowing organizations to choose the s
 
 ### Option 1: Default Installation (Developer-Managed)
 
+![Architecture Default](./assets/architecture-default.png)
+
 This option provides a fully managed experience where Term Buddy operates within the developer’s Azure environment, ensuring a quick and seamless setup.
 - **Secure Connection:** Term Buddy connects to the developer’s Azure tenant through a secured, encrypted channel with PKI authentication, ensuring data privacy and integrity.
 - **Zero Deployment Effort:** No additional setup or configuration is required from the customer.
@@ -100,6 +102,8 @@ This option provides a fully managed experience where Term Buddy operates within
 *Ideal for: Organizations seeking a hassle-free deployment with minimal administrative overhead.*
 
 ### Option 2: Customer-Managed Installation
+
+![Architecture Default](./assets/architecture-advanced.png)
 
 For organizations requiring full control over their infrastructure, this option enables deployment within the customer’s Azure Entra ID tenant using Bicep deployment scripts provided by the developer.
 - **Azure Subscription Required:** An active Azure subscription is necessary to host Term Buddy and related services.
