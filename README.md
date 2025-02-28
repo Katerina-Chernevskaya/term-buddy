@@ -62,11 +62,16 @@ AI Foundry’s **Prompt Flow** handles request preprocessing, query structuring,
 Generates accurate and contextual term explanations, real-world examples, and quizzes based on the user’s query.  
 *Delivers high-quality natural language responses, enhancing learning with AI-driven explanations tailored to the user's needs.*  
 
-### 5️⃣ **Dataverse** – Logging & Data Storage  
+### 5️⃣ **Power Automate** – Process Automation & Data Logging
+Power Automate automates key workflows by saving logs into Dataverse and retrieving user prompts for processing.
+*Ensures efficient data management, real-time logging, and seamless integration between the chatbot and backend services.*
+
+
+### 6️⃣ **Dataverse** – Logging & Data Storage  
 Stores user prompts, chat logs for auditing and insights, and dynamic data for app theming and endpoint connection, ensuring seamless adaptability and integration. 
 *Facilitates in-depth auditing of past interactions, enhances AI response accuracy through data-driven improvements, and enables real-time monitoring of user engagement trends for continuous optimization.*
 
-### 6️⃣ **Power Apps Canvas app** – Knowledge Management & Analytics  
+### 7️⃣ **Power Apps Canvas app** – Knowledge Management & Analytics  
 Provides a centralized Admin Panel for the Knowledge Manager to craft and update user prompts (which are added to the master prompt), switch between default installation and customer-managed installation, add configuration parameters, and view analytics and insights.
 *Empowers administrators with real-time insights, the ability to refine AI responses, configure system behavior, and manage term databases without requiring developer intervention.*
 
@@ -107,8 +112,8 @@ Regardless of the deployment option, the following prerequisites are required fo
 - **Power Platform Environment** – A Power Platform environment with Dataverse enabled to store user interactions and configuration settings.
 - **Microsoft Teams Access** – Users must have access to Microsoft Teams to interact with the Term Buddy agent.
 - **Power Apps License** – Required for accessing the Admin Panel where configurations, analytics, and knowledge management take place.
-- **Copilot Studio User License** – Should be assigned assigned to individual users who need manage and publish agent. 
-- **Copilot Studio Capacity** - Must be allocated within the Power Platform environment to support bot execution. Each user who needs access to create and manage agents must be assigned a Per User License (referred to as Copilot Studio User License in the Microsoft 365 admin center). Additionally, a Tenant License (referred to as Copilot Studio in the Microsoft 365 admin center) must be acquired by the tenant administrator, which is required for organization-wide usage but cannot be assigned to individual users.
+- **Copilot Studio Per User License** – Should be assigned to individual users who need manage and publish agent. 
+- **Copilot Studio Capacity** - Must be allocated within the Power Platform environment to support bot execution.
 
 ### Additional Prerequisites for Option 2 (Customer-Managed Installation)
 
@@ -138,32 +143,36 @@ For detailed deployment instructions for this option (Customer-Managed Installat
 
 ### Import term-buddy solution
 
-* [Download](./solution/termbuddy-test.zip) the `.zip` from the `solution` folder
+* [Download](./solution/termbuddy.zip) the `.zip` from the `solution` folder
 
-* Within **Power Apps Studio**, import the solution `.zip` file using **Solutions** > **Import Solution** and select the `.zip` file you just packed.
+* Within **Power Apps Studio**, import the solution `.zip` file using **Solutions** > **Import Solution** and select the `.zip` file you just downloaded.
 
-* Provide value for environment variables and Import the solution.
+* Provide value for environment variables and **Import** the solution.
 
     #|Environment Variable|Expected value|Comments
     --|--|--|--
-    1|model| <li> `-` (for Option 1) <li> `model-name` (for Option 2) | The name of the model deployed at the endpoint for Prompt Flow. <br>  *The value is used for the Option 2 (Customer-Managed Installation).*
-    2|endpoint| <li> `-` (for Option 1) <li> `endpoint-uri` (for Option 2) | The URI of the endpoint for Prompt Flow. <br> *The value is used for the Option 2 (Customer-Managed Installation).*
-    3|endpoint-secret| <li> `keep blank` (for Option 1) <li> `Path to Key Vault Secret` (for Option 2) | The path to the Azure Key Vault secret where the authentication key for accessing the primary API endpoint is securely stored.
+    1|model| <li> `-` (for Option 1) <li> `<model-name>` (for Option 2) | The name of the model deployed at the endpoint for Prompt Flow. <br>  *The value is used for the Option 2 (Customer-Managed Installation).*
+    2|endpoint| <li> `-` (for Option 1) <li> `<endpoint-uri>` (for Option 2) | The URI of the endpoint for Prompt Flow. <br> *The value is used for the Option 2 (Customer-Managed Installation).*
+    3|endpoint-secret| <li> `keep blank` (for Option 1) <li> `Path to Key Vault Secret` (for Option 2) | The path to the Azure Key Vault secret where the authentication key for accessing the primary API endpoint is securely stored. <br> *The value is used for the Option 2 (Customer-Managed Installation).*
     4|environments| `{"dev":"00000000-0000-0000-0000-000000000000", "uat":"00000000-0000-0000-0000-000000000000", "prod":"00000000-0000-0000-0000-000000000000"}` | Defines three available environments. <br> *Required value. Provide ID of your three environments. If you have less than three environments - keep `00000000-0000-0000-0000-000000000000` for the rest*
-    5|demo-endpoint| `endpoint-uri` | The URI of the endpoint designed for demo purpose. <br> *Keep the value, or replace with URI of your demo endpoint.*
+    5|demo-endpoint| `<endpoint-uri>` | The URI of the endpoint designed for demo purpose. <br> *Keep the value, or replace with URI of your demo endpoint.*
     6|demo-backend| <li> no (for Option 1) <li> yes (for Option 2) | The parameter used to determine whether to operate in the Developer-Managed (`no`) or Customer-Managed (`yes`) environment.
-    7|demo-model| `model-name` | The model deployed at the endpoint designed for demo purpose. <br> *Keep the value, or replace with model name of your demo endpoint.*
+    7|demo-model| `<model-name>` | The model deployed at the endpoint designed for demo purpose. <br> *Keep the value, or replace with model name of your demo endpoint.*
     8|color-schema| `{"Primary":"#6D62E4", "Secondary":"#FC7F1E", "Regular":"#07102C", "Light":"#EDF1FA", "White":"#FFFFFF", "Accent1":"#FCC648", "Accent2":"#354765", "Accent3":"#A8A4EE", "Accent4":"#BFE2FE"}` | Defines the color theme for the UI of the Canvas app. <br> *Required value. Provide HEX values for all nine colors.*
-    9|demo-key| `key` | The authentication key required to access the endpoint designed for demo purpose. <br> *Keep the value, or replace with model name of your demo endpoint.*
+    9|demo-key| `<key>` | The authentication key required to access the endpoint designed for demo purpose. <br> *Keep the value, or replace with model name of your demo endpoint.*
 
     ![Import solution - Environment Variables screen](./assets/import-environment-variables.png)
 
-* When the solution has been imported successfully complete the following two activities:
-    - **For Canvas app:** Share the `Term Buddy Admin Panel` app with target users.
-    - **For Agent:** 
-        - Publish `Term Buddy` agent
-        - Add the agent to Teams channel
-        - Share the agent with target users
+* Once the solution has been successfully imported, complete the following steps:
+    - **For the Canvas App (`Term Buddy Admin Panel`):**
+        - Share the **Term Buddy Admin Panel** app with the target users in Power Apps.
+        - When sharing, ensure that all users are assigned the `termbuddy-user` security role to grant them the necessary access permissions.
+    - **For the Agent (`Term Buddy`):**
+        - Publish the **Term Buddy** agent to make it available for users.
+        - Add the agent to the **Teams** channel to enable user interactions.
+        - Share the agent with the target users to grant them access.
+
+    This ensures that both the **Term Buddy Admin Panel** and the AI agent **Term Buddy** are properly configured and accessible to users. ✅
 
 * Run the application and start using Term Buddy!  
 
@@ -195,7 +204,7 @@ This step is optional. The sample data includes dummy data for the Analytics pag
 
     ![pac-tool-cmt](./assets/pac-tool-cmt.png)
 
-* Select **Import data* and **Continue**
+* Select **Import data** and **Continue**
     ![cm-login](./assets/cm-login.png)
 
 * Select **Office 365**, check **Display list of available organizations** and select **Login**
@@ -203,7 +212,7 @@ This step is optional. The sample data includes dummy data for the Analytics pag
 * Select your target environment and select **Login**
     ![cm-select-environment](./assets/cm-select-environment.png)
 
-* In the files **Zip File** select **term-buddy-sampledata.zip** downloaded earlier, and select **Import Data**.
+* In the field **Zip File** select **term-buddy-sampledata.zip** downloaded earlier, and select **Import Data**.
 
 * Once the import process will be completed, select **Exit**.
 
@@ -224,6 +233,7 @@ We welcome contributions! To contribute:
 This project is licensed under the [MIT License](./LICENSE).  
 
 ## 🤝 **Acknowledgments**  
-Built for [Hack Together 2025](https://github.com/microsoft/Powerful-Devs-Hack-Together) by **Katerina Chernevskaya** & **Artem Chernevskiy**.  
+Built for [Hack Together 2025](https://github.com/microsoft/Powerful-Devs-Hack-Together) by [Katerina Chernevskaya](https://github.com/Katerina-Chernevskaya) and [Artem Chernevskiy](https://github.com/ArtemChern)
+
 
 🔗 **Stay connected & contribute!**  

@@ -168,6 +168,7 @@ Screens:
                               - Instruction screen - Input prompt:
                                   Control: Classic/TextInput@2.3.2
                                   Properties:
+                                    AccessibleLabel: ="prompt"
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =App.Theme.Colors.Lighter80
                                     BorderThickness: =1
@@ -216,7 +217,7 @@ Screens:
                               RadiusTopLeft: =0
                               RadiusTopRight: =0
                             Children:
-                              - lbl Instruction screen - Length notification:
+                              - Instruction screen - Length notification:
                                   Control: Text@0.0.50
                                   Properties:
                                     Align: ='TextCanvas.Align'.End
@@ -252,6 +253,7 @@ Screens:
                               - Instruction screen - Update prompt button:
                                   Control: Button@0.0.44
                                   Properties:
+                                    AccessibleLabel: ="Update prompt"
                                     Align: =Align.Center
                                     BorderRadius: =nfTheming.radius
                                     Font: =Font.Lato

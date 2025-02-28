@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>kch_termbuddyadminpanel_fbe24</Name>
-  <AppVersion>2025-02-26T11:45:02Z</AppVersion>
+  <AppVersion>2025-02-27T16:20:30Z</AppVersion>
   <Status>Ready</Status>
   <CreatedByClientVersion>3.25024.6.0</CreatedByClientVersion>
   <MinClientVersion>3.25024.6.0</MinClientVersion>
-  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.25024.6","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false","sienaVersion":"20250226T102552Z-3.25024.6.0"}</Tags>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.25024.6","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false","sienaVersion":"20250226T193713Z-3.25024.6.0"}</Tags>
   <IsCdsUpgraded>0</IsCdsUpgraded>
   <GalleryItemId xsi:nil="true"></GalleryItemId>
   <BackgroundColor>rgba(109, 98, 228, 1)</BackgroundColor>
   <DisplayName>Term Buddy Admin Panel</DisplayName>
   <Description>Term Buddy Admin Panel – Empower Knowledge Managers with prompt optimization and enhanced Microsoft Teams Term Buddy usage analytics.</Description>
-  <CommitMessage>delete test env.var</CommitMessage>
+  <CommitMessage>change pages places</CommitMessage>
   <Publisher xsi:nil="true"></Publisher>
   <AuthorizationReferences>[]</AuthorizationReferences>
   <ConnectionReferences>{}</ConnectionReferences>

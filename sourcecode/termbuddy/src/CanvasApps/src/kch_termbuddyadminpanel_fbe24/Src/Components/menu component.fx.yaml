@@ -46,12 +46,14 @@
 
     "'menu gallery' As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
         '#CopilotOverlayLabel': ="Filtered"
+        AccessibleLabel: ="Menu options"
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Height: =Parent.Height - Self.Y
         Items: ='menu component'.menuIcons
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        TabIndex: =0
         TemplatePadding: =0
         TemplateSize: =80
         Transition: =Transition.Push
@@ -60,6 +62,7 @@
         ZIndex: =1
 
         "'menu icons' As image":
+            AccessibleLabel: =ThisItem.name
             BorderColor: =App.Theme.Colors.Darker40
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -83,6 +86,7 @@
                 
                 ")
             OnSelect: =Navigate(ThisItem.screen)
+            TabIndex: =0
             Tooltip: =ThisItem.name
             Width: =20
             X: =(Parent.TemplateWidth / 2) - (Self.Width / 2)
@@ -90,6 +94,7 @@
             ZIndex: =1
 
     "'menu logo' As image":
+        AccessibleLabel: ="logo"
         BorderColor: =App.Theme.Colors.Darker40
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -98,5 +103,6 @@
         PaddingLeft: =24
         PaddingRight: =24
         PaddingTop: =24
+        TabIndex: =0
         ZIndex: =2
 

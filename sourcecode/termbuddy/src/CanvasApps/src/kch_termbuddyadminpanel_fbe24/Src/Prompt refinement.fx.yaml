@@ -139,6 +139,7 @@
                     ZIndex: =7
 
                     "'Instruction screen - Input prompt' As text":
+                        AccessibleLabel: ="prompt"
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =App.Theme.Colors.Lighter80
                         Clear: =true
@@ -184,7 +185,7 @@
                     PaddingRight: =nfTheming.controlPadding
                     ZIndex: =8
 
-                    "'lbl Instruction screen - Length notification' As Text":
+                    "'Instruction screen - Length notification' As Text":
                         Align: ='TextCanvas.Align'.End
                         DisplayMode: =DisplayMode.Edit
                         Fill: =Color.Transparent
@@ -216,6 +217,7 @@
                     ZIndex: =9
 
                     "'Instruction screen - Update prompt button' As Button":
+                        AccessibleLabel: ="Update prompt"
                         Align: =Align.Center
                         BasePaletteColor: =
                         BorderRadius: =nfTheming.radius

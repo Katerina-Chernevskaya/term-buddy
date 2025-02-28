@@ -17,7 +17,14 @@
           "FlipHorizontal",
           "FlipVertical",
           "ApplyEXIFOrientation",
-          "AccessibleLabel",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "\"\"",
+            "InvariantPropertyName": "AccessibleLabel",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Tooltip",
           "ContentLanguage",
           "AutoDisableOnSelect",
@@ -47,7 +54,14 @@
           "PaddingBottom",
           "PaddingLeft",
           "DisplayMode",
-          "TabIndex",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "-1",
+            "InvariantPropertyName": "TabIndex",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "OnSelect",
           "minimumWidth",
           "minimumHeight",
@@ -78,9 +92,9 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "\"\"",
+            "InvariantScript": "\"logo\"",
             "Property": "AccessibleLabel",
-            "RuleProviderType": "Unknown"
+            "RuleProviderType": "User"
           },
           {
             "Category": "Data",
@@ -306,7 +320,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "-1",
+            "InvariantScript": "0",
             "Property": "TabIndex",
             "RuleProviderType": "Unknown"
           },
@@ -425,7 +439,14 @@
               "FlipHorizontal",
               "FlipVertical",
               "ApplyEXIFOrientation",
-              "AccessibleLabel",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "\"\"",
+                "InvariantPropertyName": "AccessibleLabel",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "Tooltip",
               "ContentLanguage",
               "AutoDisableOnSelect",
@@ -455,7 +476,14 @@
               "PaddingBottom",
               "PaddingLeft",
               "DisplayMode",
-              "TabIndex",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "-1",
+                "InvariantPropertyName": "TabIndex",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "OnSelect",
               "minimumWidth",
               "minimumHeight",
@@ -486,9 +514,9 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "\"\"",
+                "InvariantScript": "ThisItem.name",
                 "Property": "AccessibleLabel",
-                "RuleProviderType": "Unknown"
+                "RuleProviderType": "User"
               },
               {
                 "Category": "Data",
@@ -714,7 +742,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "-1",
+                "InvariantScript": "0",
                 "Property": "TabIndex",
                 "RuleProviderType": "Unknown"
               },
@@ -786,7 +814,14 @@
           "DelayItemLoading",
           "LoadingSpinner",
           "LoadingSpinnerColor",
-          "AccessibleLabel",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "\"\"",
+            "InvariantPropertyName": "AccessibleLabel",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "ContentLanguage",
           "DisplayMode",
           "BorderColor",
@@ -806,7 +841,14 @@
           "Width",
           "Height",
           "Visible",
-          "TabIndex",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "-1",
+            "InvariantPropertyName": "TabIndex",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "minimumWidth",
           "minimumHeight",
           "maximumWidth",
@@ -856,9 +898,9 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "\"\"",
+            "InvariantScript": "\"Menu options\"",
             "Property": "AccessibleLabel",
-            "RuleProviderType": "Unknown"
+            "RuleProviderType": "User"
           },
           {
             "Category": "Data",
@@ -1066,7 +1108,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "-1",
+            "InvariantScript": "0",
             "Property": "TabIndex",
             "RuleProviderType": "Unknown"
           },
@@ -1177,7 +1219,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638761670003329295",
+    "LastModifiedTimestamp": "638762695597747879",
     "Name": "menu component",
     "Rules": [
       {
@@ -1351,7 +1393,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638761670003329295",
+  "LastModifiedTimestamp": "638762695597747879",
   "Name": "b6e286b74ab5404c9b80877af1a44005",
   "OverridableProperties": {},
   "TemplateOriginalName": "component",

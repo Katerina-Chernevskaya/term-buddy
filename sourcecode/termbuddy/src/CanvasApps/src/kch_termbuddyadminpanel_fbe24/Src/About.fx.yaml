@@ -4,7 +4,7 @@ About As screen:
     ImagePosition: =ImagePosition.Fill
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    "'Analytcs Main Container_1' As groupContainer.horizontalAutoLayoutContainer":
+    "'About Main Container' As groupContainer.horizontalAutoLayoutContainer":
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
         LayoutGap: =nfTheming.layoutGap
@@ -20,7 +20,7 @@ About As screen:
         Width: =Parent.Width
         ZIndex: =1
 
-        "'Analytcs Menu Container_1' As groupContainer.verticalAutoLayoutContainer":
+        "'About Menu Container' As groupContainer.verticalAutoLayoutContainer":
             DropShadow: =DropShadow.Light
             Fill: =nfTheming.backFill
             FillPortions: =0
@@ -37,7 +37,7 @@ About As screen:
             Width: =100
             ZIndex: =2
 
-            "'Analytcs menu component_1' As 'menu component'":
+            "'About menu component' As 'menu component'":
                 currentScreen: =App.ActiveScreen.Name
                 iconColor: =nfColor.Accent2
                 iconColorCurrent: =nfColor.Primary
@@ -45,7 +45,7 @@ About As screen:
                 LayoutMinWidth: =640
                 menuIcons: =nfMenu
 
-        "'Analytcs Prompt Container_1' As groupContainer.verticalAutoLayoutContainer":
+        "'About Main container' As groupContainer.verticalAutoLayoutContainer":
             Fill: =Color.Transparent
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =nfTheming.layoutGap
@@ -55,7 +55,7 @@ About As screen:
             Width: =App.Width - 3 * nfTheming.layoutGap - 100
             ZIndex: =4
 
-            "'Analytcs screen Header_1' As groupContainer.horizontalAutoLayoutContainer":
+            "'About screen Header' As groupContainer.horizontalAutoLayoutContainer":
                 FillPortions: =0
                 Height: =100
                 LayoutMinHeight: =100
@@ -64,14 +64,14 @@ About As screen:
                 Width: =Parent.Width
                 ZIndex: =5
 
-                "'Analytcs header component_1' As 'screen header'":
+                "'About header component' As 'screen header'":
                     LayoutMinHeight: =640
                     LayoutMinWidth: =640
                     parentWidth: =Parent.Width
                     screenName: ="Term Buddy" & nfAppVersion //App.ActiveScreen.Name
-                    Width: ='Analytcs header component_1'.parentWidth
+                    Width: ='About header component'.parentWidth
 
-            "'Analytcs screen - Main part_1' As groupContainer.verticalAutoLayoutContainer":
+            "'About screen - Main part' As groupContainer.verticalAutoLayoutContainer":
                 DropShadow: =DropShadow.Light
                 Fill: =nfTheming.backFill
                 LayoutDirection: =LayoutDirection.Vertical
@@ -86,7 +86,7 @@ About As screen:
                 Width: =Parent.Width
                 ZIndex: =6
 
-                Container1 As groupContainer.verticalAutoLayoutContainer:
+                "'About screen - Main container' As groupContainer.verticalAutoLayoutContainer":
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
@@ -99,7 +99,7 @@ About As screen:
                     PaddingTop: =nfTheming.controlPadding
                     ZIndex: =8
 
-                    Container2 As groupContainer.verticalAutoLayoutContainer:
+                    "'About screen - container for nformation' As groupContainer.verticalAutoLayoutContainer":
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutMinHeight: =100
@@ -110,7 +110,7 @@ About As screen:
                         Width: =200
                         ZIndex: =2
 
-                        HtmlText1_1 As htmlViewer:
+                        "'About screen - information' As htmlViewer":
                             AutoHeight: =true
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             Font: =App.Theme.Font

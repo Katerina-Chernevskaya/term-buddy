@@ -42,7 +42,7 @@ Before deploying the infrastructure, ensure the following:
 
     ![az version](./infra-assets/login-azure.png)
 
-2. Deploy the **budget configuration**:
+2. Deploy the **budget configuration** (optional):
    ```sh
    az deployment sub create --name <BUDGET_DEPLOYMENT_NAME> --location francecentral --template-file ".\code\budget.bicep" --parameters startDate=<START_DATE_YYYY-MM-DD> endDate=<END_DATE_YYYY-MM-DD> contactEmails='[\"<EMAIL1>\", \"<EMAIL2>\"]' budgetName=<BUDGET_NAME> amount=<BUDGET_AMOUNT>
    ```
@@ -76,9 +76,8 @@ az provider register --namespace Microsoft.PowerPlatform --wait
 
 1. Navigate to [Azure Quotas](https://portal.azure.com/#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/overview).
 2. Select the **Machine Learning** provider and region: `France Central` (or another region where you plan to deploy Azure resources).
-3. Ensure the **D-series VM quota** is available.
+3. Ensure the **D-series VM quota** (or any other required VM type) is available.
 4. If the quota is unavailable, request an increase or raise a ticket with **Microsoft Support**.
-
     ![az version](./infra-assets/quotas.jpg)
     ![az version](./infra-assets/quotasavailability.jpg)
 

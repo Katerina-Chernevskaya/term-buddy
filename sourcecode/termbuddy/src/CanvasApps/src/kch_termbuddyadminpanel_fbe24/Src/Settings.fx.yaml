@@ -4,7 +4,7 @@ Settings As screen:
     ImagePosition: =ImagePosition.Fill
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    "'Analytcs Main Container_2' As groupContainer.horizontalAutoLayoutContainer":
+    "'Settings Main Container' As groupContainer.horizontalAutoLayoutContainer":
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
         LayoutGap: =nfTheming.layoutGap
@@ -20,7 +20,7 @@ Settings As screen:
         Width: =Parent.Width
         ZIndex: =1
 
-        "'Analytcs Menu Container_2' As groupContainer.verticalAutoLayoutContainer":
+        "'Settings Menu Container' As groupContainer.verticalAutoLayoutContainer":
             DropShadow: =DropShadow.Light
             Fill: =nfTheming.backFill
             FillPortions: =0
@@ -37,7 +37,7 @@ Settings As screen:
             Width: =100
             ZIndex: =2
 
-            "'Analytcs menu component_2' As 'menu component'":
+            "'Settings menu component' As 'menu component'":
                 currentScreen: =App.ActiveScreen.Name
                 iconColor: =nfColor.Accent2
                 iconColorCurrent: =nfColor.Primary
@@ -45,7 +45,7 @@ Settings As screen:
                 LayoutMinWidth: =640
                 menuIcons: =nfMenu
 
-        "'Analytcs Prompt Container_2' As groupContainer.verticalAutoLayoutContainer":
+        "'Settings Prompt Container' As groupContainer.verticalAutoLayoutContainer":
             Fill: =Color.Transparent
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =nfTheming.layoutGap
@@ -55,7 +55,7 @@ Settings As screen:
             Width: =App.Width - 3 * nfTheming.layoutGap - 100
             ZIndex: =3
 
-            "'Analytcs screen Header_2' As groupContainer.horizontalAutoLayoutContainer":
+            "'Settings screen Header' As groupContainer.horizontalAutoLayoutContainer":
                 FillPortions: =0
                 Height: =100
                 LayoutMinHeight: =100
@@ -64,14 +64,14 @@ Settings As screen:
                 Width: =Parent.Width
                 ZIndex: =4
 
-                "'Analytcs header component_2' As 'screen header'":
+                "'Settings header component' As 'screen header'":
                     LayoutMinHeight: =640
                     LayoutMinWidth: =640
                     parentWidth: =Parent.Width
                     screenName: =App.ActiveScreen.Name
-                    Width: ='Analytcs header component_2'.parentWidth
+                    Width: ='Settings header component'.parentWidth
 
-            "'Analytcs screen - Main part_2' As groupContainer.verticalAutoLayoutContainer":
+            "'Settings screen - Main part' As groupContainer.verticalAutoLayoutContainer":
                 DropShadow: =DropShadow.Light
                 Fill: =nfTheming.backFill
                 LayoutDirection: =LayoutDirection.Vertical
@@ -86,7 +86,7 @@ Settings As screen:
                 Width: =Parent.Width
                 ZIndex: =5
 
-                Container3 As groupContainer.horizontalAutoLayoutContainer:
+                "'Settings screen - Container' As groupContainer.horizontalAutoLayoutContainer":
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
@@ -100,7 +100,7 @@ Settings As screen:
                     RadiusTopRight: =4
                     ZIndex: =7
 
-                    Container4 As groupContainer.verticalAutoLayoutContainer:
+                    "'Settings screen - Container for description' As groupContainer.verticalAutoLayoutContainer":
                         FillPortions: =2
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutDirection: =LayoutDirection.Vertical
@@ -114,7 +114,7 @@ Settings As screen:
                         RadiusTopRight: =4
                         ZIndex: =1
 
-                        HtmlText1 As htmlViewer:
+                        "'Settings screen - Description' As htmlViewer":
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             FillPortions: =1
                             Font: =App.Theme.Font
@@ -148,7 +148,7 @@ Settings As screen:
                             Size: =10
                             ZIndex: =1
 
-                    Container5 As groupContainer.verticalAutoLayoutContainer:
+                    "'Settings screen - Container for form' As groupContainer.verticalAutoLayoutContainer":
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                         LayoutMinHeight: =100
@@ -161,7 +161,7 @@ Settings As screen:
                         RadiusTopRight: =4
                         ZIndex: =2
 
-                        HtmlText2 As htmlViewer:
+                        "'Settings screen - Form header' As htmlViewer":
                             AlignInContainer: =AlignInContainer.Stretch
                             AutoHeight: =true
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -175,7 +175,8 @@ Settings As screen:
                             Size: =10
                             ZIndex: =1
 
-                        RadioGroupCanvas1 As Radio.pcfdataset:
+                        "'Settings screen - Option selection' As Radio.pcfdataset":
+                            AccessibleLabel: ="Select option"
                             AlignInContainer: =AlignInContainer.Start
                             DefaultSelectedItems: |-
                                 =LookUp(
@@ -200,7 +201,7 @@ Settings As screen:
                                 Order: =1
                                 ZIndex: =18
 
-                        HtmlText3 As htmlViewer:
+                        "'Settings screen - Subheader 1' As htmlViewer":
                             AlignInContainer: =AlignInContainer.Stretch
                             AutoHeight: =true
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -209,7 +210,7 @@ Settings As screen:
                             HtmlText: |-
                                 ="<header><h3><font color="& 
                                 If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     nfColor.Accent3,
                                     nfColor.Primary 
                                 )
@@ -221,7 +222,7 @@ Settings As screen:
                             Size: =10
                             ZIndex: =3
 
-                        HtmlText4 As htmlViewer:
+                        "'Settings screen - Endpoint subheader' As htmlViewer":
                             AlignInContainer: =AlignInContainer.Stretch
                             AutoHeight: =true
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -230,7 +231,7 @@ Settings As screen:
                             HtmlText: |-
                                 ="<header><h4><font color="& 
                                 If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     nfColor.Accent3,
                                     nfColor.Primary 
                                 )
@@ -242,13 +243,13 @@ Settings As screen:
                             Size: =10
                             ZIndex: =4
 
-                        TextCanvas2 As Text:
+                        "'Settings screen - Endpoint header' As Text":
                             AlignInContainer: =AlignInContainer.Start
                             DisplayMode: =DisplayMode.Edit
                             FillPortions: =1
                             FontColor: |-
                                 =If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     nfColor.Accent2,
                                     nfColor.Regular 
                                 )
@@ -263,13 +264,13 @@ Settings As screen:
                             Y: =0
                             ZIndex: =5
 
-                        "TextInputCanvas1 As 'Text input'":
-                            AccessibleLabel: =
+                        "'Settings screen - Endpoint value' As 'Text input'":
+                            AccessibleLabel: ="Endpoint"
                             AlignInContainer: =AlignInContainer.Stretch
                             Appearance: ='TextInputCanvas.Appearance'.Outline
                             DisplayMode: |-
                                 =If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     DisplayMode.Disabled,
                                     DisplayMode.Edit 
                                 )
@@ -284,13 +285,13 @@ Settings As screen:
                             Y: =0
                             ZIndex: =6
 
-                        TextCanvas3 As Text:
+                        "'Settings screen - Model header' As Text":
                             AlignInContainer: =AlignInContainer.Start
                             DisplayMode: =DisplayMode.Edit
                             FillPortions: =1
                             FontColor: |-
                                 =If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     nfColor.Accent2,
                                     nfColor.Regular 
                                 )
@@ -305,12 +306,13 @@ Settings As screen:
                             Y: =0
                             ZIndex: =7
 
-                        "TextInputCanvas2 As 'Text input'":
+                        "'Settings screen - Model value' As 'Text input'":
+                            AccessibleLabel: ="Model"
                             AlignInContainer: =AlignInContainer.Stretch
                             Appearance: ='TextInputCanvas.Appearance'.Outline
                             DisplayMode: |-
                                 =If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     DisplayMode.Disabled,
                                     DisplayMode.Edit 
                                 )
@@ -324,7 +326,7 @@ Settings As screen:
                             Y: =0
                             ZIndex: =8
 
-                        HtmlText6 As htmlViewer:
+                        "'Settings screen - Key Vault subheader' As htmlViewer":
                             AlignInContainer: =AlignInContainer.Stretch
                             AutoHeight: =true
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -333,7 +335,7 @@ Settings As screen:
                             HtmlText: |-
                                 ="<header><h4><font color="& 
                                 If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     nfColor.Accent3,
                                     nfColor.Primary 
                                 )
@@ -345,13 +347,13 @@ Settings As screen:
                             Size: =10
                             ZIndex: =9
 
-                        TextCanvas4 As Text:
+                        "'Settings screen - Subscription header' As Text":
                             AlignInContainer: =AlignInContainer.Start
                             DisplayMode: =DisplayMode.Edit
                             FillPortions: =1
                             FontColor: |-
                                 =If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     nfColor.Accent2,
                                     nfColor.Regular 
                                 )
@@ -366,12 +368,13 @@ Settings As screen:
                             Y: =0
                             ZIndex: =10
 
-                        "TextInputCanvas3 As 'Text input'":
+                        "'Settings screen - Subscription value' As 'Text input'":
+                            AccessibleLabel: ="Subscription"
                             AlignInContainer: =AlignInContainer.Stretch
                             Appearance: ='TextInputCanvas.Appearance'.Outline
                             DisplayMode: |-
                                 =If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     DisplayMode.Disabled,
                                     DisplayMode.Edit 
                                 )
@@ -385,13 +388,13 @@ Settings As screen:
                             Y: =0
                             ZIndex: =11
 
-                        TextCanvas5 As Text:
+                        "'Settings screen - Resource group header' As Text":
                             AlignInContainer: =AlignInContainer.Start
                             DisplayMode: =DisplayMode.Edit
                             FillPortions: =1
                             FontColor: |-
                                 =If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     nfColor.Accent2,
                                     nfColor.Regular 
                                 )
@@ -406,12 +409,13 @@ Settings As screen:
                             Y: =0
                             ZIndex: =12
 
-                        "TextInputCanvas4 As 'Text input'":
+                        "'Settings screen - Resource group value' As 'Text input'":
+                            AccessibleLabel: ="Resource group"
                             AlignInContainer: =AlignInContainer.Stretch
                             Appearance: ='TextInputCanvas.Appearance'.Outline
                             DisplayMode: |-
                                 =If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     DisplayMode.Disabled,
                                     DisplayMode.Edit 
                                 )
@@ -425,13 +429,13 @@ Settings As screen:
                             Y: =0
                             ZIndex: =13
 
-                        TextCanvas6 As Text:
+                        "'Settings screen - Key Vault name header' As Text":
                             AlignInContainer: =AlignInContainer.Start
                             DisplayMode: =DisplayMode.Edit
                             FillPortions: =1
                             FontColor: |-
                                 =If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     nfColor.Accent2,
                                     nfColor.Regular 
                                 )
@@ -446,12 +450,13 @@ Settings As screen:
                             Y: =0
                             ZIndex: =14
 
-                        "TextInputCanvas5 As 'Text input'":
+                        "'Settings screen - Key Vault name value' As 'Text input'":
+                            AccessibleLabel: ="Key Vault"
                             AlignInContainer: =AlignInContainer.Stretch
                             Appearance: ='TextInputCanvas.Appearance'.Outline
                             DisplayMode: |-
                                 =If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     DisplayMode.Disabled,
                                     DisplayMode.Edit 
                                 )
@@ -465,13 +470,13 @@ Settings As screen:
                             Y: =0
                             ZIndex: =15
 
-                        TextCanvas8 As Text:
+                        "'Settings screen - Secret header' As Text":
                             AlignInContainer: =AlignInContainer.Start
                             DisplayMode: =DisplayMode.Edit
                             FillPortions: =1
                             FontColor: |-
                                 =If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     nfColor.Accent2,
                                     nfColor.Regular 
                                 )
@@ -486,12 +491,13 @@ Settings As screen:
                             Y: =0
                             ZIndex: =16
 
-                        "TextInputCanvas6 As 'Text input'":
+                        "'Settings screen - Secret value' As 'Text input'":
+                            AccessibleLabel: ="secret"
                             AlignInContainer: =AlignInContainer.Stretch
                             Appearance: ='TextInputCanvas.Appearance'.Outline
                             DisplayMode: |-
                                 =If(
-                                    RadioGroupCanvas1.Selected.mode = "no",
+                                    'Settings screen - Option selection'.Selected.mode = "no",
                                     DisplayMode.Disabled,
                                     DisplayMode.Edit 
                                 )
@@ -505,7 +511,7 @@ Settings As screen:
                             Y: =0
                             ZIndex: =17
 
-                        Container6 As groupContainer.manualLayoutContainer:
+                        "'Settings screen - Space container' As groupContainer.manualLayoutContainer":
                             LayoutMinHeight: =20
                             LayoutMinWidth: =250
                             RadiusBottomLeft: =4
@@ -514,7 +520,8 @@ Settings As screen:
                             RadiusTopRight: =4
                             ZIndex: =18
 
-                        "'Instruction screen - Update prompt button_2' As Button":
+                        "'Settings screen - Save button' As Button":
+                            AccessibleLabel: ="Save"
                             Align: =Align.Center
                             BasePaletteColor: =
                             BorderRadius: =nfTheming.radius
@@ -538,12 +545,12 @@ Settings As screen:
                                         ),
                                         {
                                             Value: 
-                                            RadioGroupCanvas1.Selected.mode
+                                            'Settings screen - Option selection'.Selected.mode
                                         }
                                     ),
                                     Notify("Sorry, something went wrong. The selected option can't be saved.",NotificationType.Error),
                                     If(
-                                        RadioGroupCanvas1.Selected.mode = "yes",
+                                        'Settings screen - Option selection'.Selected.mode = "yes",
                                         IfError(
                                             Patch(
                                                 'Environment Variable Values',
@@ -554,13 +561,13 @@ Settings As screen:
                                                 {
                                                     Value:
                                                     "/subscriptions/" &
-                                                    TextInputCanvas3.Value &
+                                                    'Settings screen - Subscription value'.Value &
                                                     "/resourceGroups/" &
-                                                    TextInputCanvas4.Value &
+                                                    'Settings screen - Resource group value'.Value &
                                                     "/providers/Microsoft.KeyVault/vaults/" &
-                                                    TextInputCanvas5.Value &
+                                                    'Settings screen - Key Vault name value'.Value &
                                                     "/secrets/" &
-                                                    TextInputCanvas6.Value
+                                                    'Settings screen - Secret value'.Value
                                                 }
                                             ),
                                             Notify("Sorry, something went wrong, settings can't be saved. Please check your permissions to Azure Key Vault.",NotificationType.Error),

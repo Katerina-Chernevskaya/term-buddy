@@ -81,8 +81,10 @@ ComponentDefinitions:
           Control: Gallery@2.15.0
           Variant: BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0
           Properties:
+            AccessibleLabel: ="Menu options"
             Height: =Parent.Height - Self.Y
             Items: ='menu component'.menuIcons
+            TabIndex: =0
             TemplateSize: =80
             Transition: =Transition.Push
             Width: =Parent.Width
@@ -91,9 +93,11 @@ ComponentDefinitions:
             - menu icons:
                 Control: Image@2.2.3
                 Properties:
+                  AccessibleLabel: =ThisItem.name
                   Height: =20
                   Image: "=\"data:image/svg+xml;utf8, \"&EncodeUrl(\"\r\n    \r\n    <svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='\" & \r\n    \r\n    If(\r\n        ThisItem.name = 'menu component'.currentScreen,\r\n        'menu component'.iconColorCurrent,\r\n        'menu component'.iconColor\r\n    )\r\n\r\n    & \"' viewBox='0 0 16 16'>\r\n\r\n    \" & ThisItem.path & \"\r\n\r\n    </svg>\r\n\r\n\")"
                   OnSelect: =Navigate(ThisItem.screen)
+                  TabIndex: =0
                   Tooltip: =ThisItem.name
                   Width: =20
                   X: =(Parent.TemplateWidth / 2) - (Self.Width / 2)
@@ -101,8 +105,10 @@ ComponentDefinitions:
       - menu logo:
           Control: Image@2.2.3
           Properties:
+            AccessibleLabel: ="logo"
             Image: ='menu component'.logo
             PaddingBottom: =24
             PaddingLeft: =24
             PaddingRight: =24
             PaddingTop: =24
+            TabIndex: =0

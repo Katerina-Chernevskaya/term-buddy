@@ -141,9 +141,9 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
+    "Analytics",
     "Prompt refinement",
     "Settings",
-    "Analytics",
     "About"
   ]
 }

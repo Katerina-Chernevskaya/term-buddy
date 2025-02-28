@@ -125,7 +125,7 @@ Screens:
                               RadiusTopRight: =0
                               Width: =Parent.Width
                             Children:
-                              - Messages Container:
+                              - Analytics screen - Messages Container:
                                   Control: GroupContainer@1.3.0
                                   Variant: ManualLayout
                                   Properties:
@@ -140,7 +140,7 @@ Screens:
                                     RadiusTopRight: =0
                                     Width: =70 + 30
                                   Children:
-                                    - TextCanvas4_2:
+                                    - Analytics screen - Messages header:
                                         Control: Text@0.0.50
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
@@ -155,7 +155,7 @@ Screens:
                                           VerticalAlign: =VerticalAlign.Middle
                                           Width: =70
                                           Wrap: =false
-                                    - TextCanvas4_3:
+                                    - Analytics screen - Messages value:
                                         Control: Text@0.0.50
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
@@ -168,22 +168,22 @@ Screens:
                                           Text: |-
                                             =First(
                                                 Filter(
-                                                    udfMetricsCount(DropdownCanvas1.Selected.days, DropdownCanvas1.Selected.startDate, DropdownCanvas1.Selected.endDate),
+                                                    udfMetricsCount('Analytics screen - Period dropdown'.Selected.days, 'Analytics screen - Period dropdown'.Selected.startDate, 'Analytics screen - Period dropdown'.Selected.endDate),
                                                     metric = "Messages"
                                                 )
                                             ).count
                                           Width: =70
-                                          Y: =TextCanvas4_2.Y + TextCanvas4_2.Height
-                                    - Image8_1:
+                                          Y: ='Analytics screen - Messages header'.Y + 'Analytics screen - Messages header'.Height
+                                    - Analytics screen - Messages info:
                                         Control: Image@2.2.3
                                         Properties:
                                           Height: =15
                                           Image: "=\"data:image/svg+xml;utf8, \"&EncodeUrl(\"\r\n    \r\n    <svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='\" & nfColor.Regular & \"' viewBox='0 0 16 16'>\r\n\r\n    <path d='m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0'/>\r\n\r\n    </svg>\r\n\r\n\")"
                                           Tooltip: ="Total number of messages exchanged during the selected period."
                                           Width: =15
-                                          X: =TextCanvas4_2.X + TextCanvas4_2.Width
+                                          X: ='Analytics screen - Messages header'.X + 'Analytics screen - Messages header'.Width
                                           Y: =3
-                              - Quiz Container:
+                              - Analytics screen - Quiz Container:
                                   Control: GroupContainer@1.3.0
                                   Variant: ManualLayout
                                   Properties:
@@ -198,7 +198,7 @@ Screens:
                                     RadiusTopRight: =0
                                     Width: =57 + 30
                                   Children:
-                                    - TextCanvas4_4:
+                                    - Analytics screen - Quiz header:
                                         Control: Text@0.0.50
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
@@ -213,7 +213,7 @@ Screens:
                                           VerticalAlign: =VerticalAlign.Middle
                                           Width: =57
                                           Wrap: =false
-                                    - TextCanvas4_5:
+                                    - Analytics screen - Quiz value:
                                         Control: Text@0.0.50
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
@@ -227,22 +227,22 @@ Screens:
                                           Text: |-
                                             =First(
                                                 Filter(
-                                                    udfMetricsCount(DropdownCanvas1.Selected.days, DropdownCanvas1.Selected.startDate, DropdownCanvas1.Selected.endDate),
+                                                    udfMetricsCount('Analytics screen - Period dropdown'.Selected.days, 'Analytics screen - Period dropdown'.Selected.startDate, 'Analytics screen - Period dropdown'.Selected.endDate),
                                                     metric = "Quizes"
                                                 )
                                             ).count
                                           Width: =57
-                                          Y: =TextCanvas4_4.Y + TextCanvas4_4.Height
-                                    - Image8_2:
+                                          Y: ='Analytics screen - Quiz header'.Y + 'Analytics screen - Quiz header'.Height
+                                    - Analytics screen - Quiz info:
                                         Control: Image@2.2.3
                                         Properties:
                                           Height: =15
                                           Image: "=\"data:image/svg+xml;utf8, \"&EncodeUrl(\"\r\n    \r\n    <svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='\" & nfColor.Regular & \"' viewBox='0 0 16 16'>\r\n\r\n    <path d='m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0'/>\r\n\r\n    </svg>\r\n\r\n\")"
                                           Tooltip: ="Number of quizzes initiated during the selected period."
                                           Width: =15
-                                          X: =TextCanvas4_4.X + TextCanvas4_4.Width
+                                          X: ='Analytics screen - Quiz header'.X + 'Analytics screen - Quiz header'.Width
                                           Y: =3
-                              - Container17_1:
+                              - Analytics screen - Examples Container:
                                   Control: GroupContainer@1.3.0
                                   Variant: ManualLayout
                                   Properties:
@@ -257,7 +257,7 @@ Screens:
                                     RadiusTopRight: =0
                                     Width: =68 + 30
                                   Children:
-                                    - TextCanvas4_6:
+                                    - Analytics screen - Examples header:
                                         Control: Text@0.0.50
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
@@ -272,7 +272,7 @@ Screens:
                                           VerticalAlign: =VerticalAlign.Middle
                                           Width: =68
                                           Wrap: =false
-                                    - TextCanvas4_7:
+                                    - Analytics screen - Examples value:
                                         Control: Text@0.0.50
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
@@ -285,22 +285,22 @@ Screens:
                                           Text: |-
                                             =First(
                                                 Filter(
-                                                    udfMetricsCount(DropdownCanvas1.Selected.days, DropdownCanvas1.Selected.startDate, DropdownCanvas1.Selected.endDate),
+                                                    udfMetricsCount('Analytics screen - Period dropdown'.Selected.days, 'Analytics screen - Period dropdown'.Selected.startDate, 'Analytics screen - Period dropdown'.Selected.endDate),
                                                     metric = "Examples"
                                                 )
                                             ).count
                                           Width: =68
-                                          Y: =TextCanvas4_6.Y + TextCanvas4_6.Height
-                                    - Image8_3:
+                                          Y: ='Analytics screen - Examples header'.Y + 'Analytics screen - Examples header'.Height
+                                    - Analytics screen - Examples info:
                                         Control: Image@2.2.3
                                         Properties:
                                           Height: =15
                                           Image: "=\"data:image/svg+xml;utf8, \"&EncodeUrl(\"\r\n    \r\n    <svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='\" & nfColor.Regular & \"' viewBox='0 0 16 16'>\r\n\r\n    <path d='m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0'/>\r\n\r\n    </svg>\r\n\r\n\")"
                                           Tooltip: ="Number of example requests made during the selected period."
                                           Width: =15
-                                          X: =TextCanvas4_6.X + TextCanvas4_6.Width
+                                          X: ='Analytics screen - Examples header'.X + 'Analytics screen - Examples header'.Width
                                           Y: =3
-                              - Container18_1:
+                              - Analytics screen - Renews definition Container:
                                   Control: GroupContainer@1.3.0
                                   Variant: ManualLayout
                                   Properties:
@@ -315,7 +315,7 @@ Screens:
                                     RadiusTopRight: =0
                                     Width: =127 + 30
                                   Children:
-                                    - TextCanvas4_8:
+                                    - Analytics screen - Renews definition header:
                                         Control: Text@0.0.50
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
@@ -330,7 +330,7 @@ Screens:
                                           VerticalAlign: =VerticalAlign.Middle
                                           Width: =127
                                           Wrap: =false
-                                    - TextCanvas4_9:
+                                    - Analytics screen - Renews definition value:
                                         Control: Text@0.0.50
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
@@ -343,22 +343,22 @@ Screens:
                                           Text: |-
                                             =First(
                                                 Filter(
-                                                    udfMetricsCount(DropdownCanvas1.Selected.days, DropdownCanvas1.Selected.startDate, DropdownCanvas1.Selected.endDate),
+                                                    udfMetricsCount('Analytics screen - Period dropdown'.Selected.days, 'Analytics screen - Period dropdown'.Selected.startDate, 'Analytics screen - Period dropdown'.Selected.endDate),
                                                     metric = "Refreshes"
                                                 )
                                             ).count
                                           Width: =127
-                                          Y: =TextCanvas4_8.Y + TextCanvas4_8.Height
-                                    - Image8_4:
+                                          Y: ='Analytics screen - Renews definition header'.Y + 'Analytics screen - Renews definition header'.Height
+                                    - Analytics screen - Renews definition info:
                                         Control: Image@2.2.3
                                         Properties:
                                           Height: =15
                                           Image: "=\"data:image/svg+xml;utf8, \"&EncodeUrl(\"\r\n    \r\n    <svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='\" & nfColor.Regular & \"' viewBox='0 0 16 16'>\r\n\r\n    <path d='m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0'/>\r\n\r\n    </svg>\r\n\r\n\")"
                                           Tooltip: ="Number of term definition updates requested during the selected period."
                                           Width: =15
-                                          X: =TextCanvas4_8.X + TextCanvas4_8.Width
+                                          X: ='Analytics screen - Renews definition header'.X + 'Analytics screen - Renews definition header'.Width
                                           Y: =3
-                              - Container19_1:
+                              - Analytics screen - Terms Container:
                                   Control: GroupContainer@1.3.0
                                   Variant: ManualLayout
                                   Properties:
@@ -373,7 +373,7 @@ Screens:
                                     RadiusTopRight: =0
                                     Width: =44 + 30
                                   Children:
-                                    - TextCanvas4_10:
+                                    - Analytics screen - Terms header:
                                         Control: Text@0.0.50
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
@@ -388,7 +388,7 @@ Screens:
                                           VerticalAlign: =VerticalAlign.Middle
                                           Width: =44
                                           Wrap: =false
-                                    - TextCanvas4_11:
+                                    - Analytics screen - Terms value:
                                         Control: Text@0.0.50
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
@@ -401,22 +401,22 @@ Screens:
                                           Text: |-
                                             =First(
                                                 Filter(
-                                                    udfMetricsCount(DropdownCanvas1.Selected.days, DropdownCanvas1.Selected.startDate, DropdownCanvas1.Selected.endDate),
+                                                    udfMetricsCount('Analytics screen - Period dropdown'.Selected.days, 'Analytics screen - Period dropdown'.Selected.startDate, 'Analytics screen - Period dropdown'.Selected.endDate),
                                                     metric = "Terms"
                                                 )
                                             ).count
                                           Width: =44
-                                          Y: =TextCanvas4_10.Y + TextCanvas4_10.Height
-                                    - Image8_5:
+                                          Y: ='Analytics screen - Terms header'.Y + 'Analytics screen - Terms header'.Height
+                                    - Analytics screen - Terms info:
                                         Control: Image@2.2.3
                                         Properties:
                                           Height: =15
                                           Image: "=\"data:image/svg+xml;utf8, \"&EncodeUrl(\"\r\n    \r\n    <svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='\" & nfColor.Regular & \"' viewBox='0 0 16 16'>\r\n\r\n    <path d='m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0'/>\r\n\r\n    </svg>\r\n\r\n\")"
                                           Tooltip: ="Number of unique terms queried in the chat during the selected period."
                                           Width: =15
-                                          X: =TextCanvas4_10.X + TextCanvas4_10.Width
+                                          X: ='Analytics screen - Terms header'.X + 'Analytics screen - Terms header'.Width
                                           Y: =3
-                              - dates:
+                              - Analytics screen - Period container:
                                   Control: GroupContainer@1.3.0
                                   Variant: AutoLayout
                                   Properties:
@@ -431,7 +431,7 @@ Screens:
                                     RadiusTopRight: =0
                                     Width: =150
                                   Children:
-                                    - TextCanvas1:
+                                    - Analytics screen - Period header:
                                         Control: Text@0.0.50
                                         Properties:
                                           AlignInContainer: =AlignInContainer.Stretch
@@ -440,7 +440,7 @@ Screens:
                                           Height: =25
                                           Text: ="Analytics Period"
                                           VerticalAlign: =VerticalAlign.Middle
-                                    - DropdownCanvas1:
+                                    - Analytics screen - Period dropdown:
                                         Control: DropDown@0.0.44
                                         Properties:
                                           AccessibleLabel: ="Analytics Period"
@@ -475,7 +475,7 @@ Screens:
                               RadiusTopRight: =0
                               Width: =Parent.Width
                             Children:
-                              - Container21:
+                              - Analytics screen - Chart container:
                                   Control: GroupContainer@1.3.0
                                   Variant: AutoLayout
                                   Properties:
@@ -486,7 +486,7 @@ Screens:
                                     RadiusTopLeft: =0
                                     RadiusTopRight: =0
                                   Children:
-                                    - Image9_4:
+                                    - Analytics screen - Chart:
                                         Control: Image@2.2.3
                                         Properties:
                                           AlignInContainer: =AlignInContainer.Stretch
@@ -502,8 +502,8 @@ Screens:
                                                         Sort(ForAll(
                                                             Sequence( 
                                                                 If(
-                                                                    DropdownCanvas1.Selected.days < 200,
-                                                                    DropdownCanvas1.Selected.days,
+                                                                    'Analytics screen - Period dropdown'.Selected.days < 200,
+                                                                    'Analytics screen - Period dropdown'.Selected.days,
                                                                     200
                                                                 ),
                                                                 0, 
@@ -533,8 +533,8 @@ Screens:
                                                             ForAll(
                                                                 Sequence(
                                                                     If(
-                                                                        DropdownCanvas1.Selected.days < 200,
-                                                                        DropdownCanvas1.Selected.days,
+                                                                        'Analytics screen - Period dropdown'.Selected.days < 200,
+                                                                        'Analytics screen - Period dropdown'.Selected.days,
                                                                         200
                                                                     ), 
                                                                     0, 
@@ -594,8 +594,8 @@ Screens:
                                                             ForAll(
                                                                 Sequence(
                                                                     If(
-                                                                        DropdownCanvas1.Selected.days < 200,
-                                                                        DropdownCanvas1.Selected.days,
+                                                                        'Analytics screen - Period dropdown'.Selected.days < 200,
+                                                                        'Analytics screen - Period dropdown'.Selected.days,
                                                                         200
                                                                     ),  
                                                                     0, 
@@ -658,8 +658,8 @@ Screens:
                                                             ForAll(
                                                                 Sequence(
                                                                     If(
-                                                                        DropdownCanvas1.Selected.days < 200,
-                                                                        DropdownCanvas1.Selected.days,
+                                                                        'Analytics screen - Period dropdown'.Selected.days < 200,
+                                                                        'Analytics screen - Period dropdown'.Selected.days,
                                                                         200
                                                                     ),  
                                                                     0, 
@@ -723,14 +723,14 @@ Screens:
                                               }
                                             }
                                             ")
-                              - Container22:
+                              - Analytics screen - Histogram container:
                                   Control: GroupContainer@1.3.0
                                   Variant: AutoLayout
                                   Properties:
                                     DropShadow: =DropShadow.None
                                     LayoutDirection: =LayoutDirection.Vertical
                                   Children:
-                                    - Image9_5:
+                                    - Analytics screen - Histogram:
                                         Control: Image@2.2.3
                                         Properties:
                                           AlignInContainer: =AlignInContainer.Stretch
@@ -750,8 +750,8 @@ Screens:
                                                                             Filter(
                                                                                 'termbuddy-statistics',
                                                                                 And(
-                                                                                    CreatedDateTime >= DropdownCanvas1.Selected.startDate,
-                                                                                    CreatedDateTime <= DropdownCanvas1.Selected.endDate
+                                                                                    CreatedDateTime >= 'Analytics screen - Period dropdown'.Selected.startDate,
+                                                                                    CreatedDateTime <= 'Analytics screen - Period dropdown'.Selected.endDate
                                                                                 ) && action = "new_term"
                                                                             ),
                                                                             term,
@@ -780,8 +780,8 @@ Screens:
                                                                             Filter(
                                                                                 'termbuddy-statistics',
                                                                                 And(
-                                                                                    CreatedDateTime >= DropdownCanvas1.Selected.startDate,
-                                                                                    CreatedDateTime <= DropdownCanvas1.Selected.endDate
+                                                                                    CreatedDateTime >= 'Analytics screen - Period dropdown'.Selected.startDate,
+                                                                                    CreatedDateTime <= 'Analytics screen - Period dropdown'.Selected.endDate
                                                                                 ) && action = "new_term"
                                                                             ),
                                                                             term,

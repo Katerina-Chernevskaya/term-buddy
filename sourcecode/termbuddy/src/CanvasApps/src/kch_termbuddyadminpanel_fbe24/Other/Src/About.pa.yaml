@@ -13,7 +13,7 @@ Screens:
       BackgroundImage: ='termbuddy-background3'
       ImagePosition: =ImagePosition.Fill
     Children:
-      - Analytcs Main Container_1:
+      - About Main Container:
           Control: GroupContainer@1.3.0
           Variant: AutoLayout
           Properties:
@@ -26,7 +26,7 @@ Screens:
             PaddingTop: =nfTheming.layoutGap
             Width: =Parent.Width
           Children:
-            - Analytcs Menu Container_1:
+            - About Menu Container:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -43,7 +43,7 @@ Screens:
                   RadiusTopRight: =nfTheming.radius
                   Width: =100
                 Children:
-                  - Analytcs menu component_1:
+                  - About menu component:
                       Control: CanvasComponent
                       ComponentName: menu component
                       Properties:
@@ -55,7 +55,7 @@ Screens:
                         logo: =logo
                         menuIcons: =nfMenu
                         parentHeight: =100
-            - Analytcs Prompt Container_1:
+            - About Main container:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -69,7 +69,7 @@ Screens:
                   RadiusTopRight: =0
                   Width: =App.Width - 3 * nfTheming.layoutGap - 100
                 Children:
-                  - Analytcs screen Header_1:
+                  - About screen Header:
                       Control: GroupContainer@1.3.0
                       Variant: AutoLayout
                       Properties:
@@ -83,15 +83,15 @@ Screens:
                         RadiusTopRight: =0
                         Width: =Parent.Width
                       Children:
-                        - Analytcs header component_1:
+                        - About header component:
                             Control: CanvasComponent
                             ComponentName: screen header
                             Properties:
                               Height: =100
-                              Width: ='Analytcs header component_1'.parentWidth
+                              Width: ='About header component'.parentWidth
                               parentWidth: =Parent.Width
                               screenName: ="Term Buddy" & nfAppVersion //App.ActiveScreen.Name
-                  - Analytcs screen - Main part_1:
+                  - About screen - Main part:
                       Control: GroupContainer@1.3.0
                       Variant: AutoLayout
                       Properties:
@@ -104,7 +104,7 @@ Screens:
                         RadiusTopRight: =nfTheming.radius
                         Width: =Parent.Width
                       Children:
-                        - Container1:
+                        - About screen - Main container:
                             Control: GroupContainer@1.3.0
                             Variant: AutoLayout
                             Properties:
@@ -121,7 +121,7 @@ Screens:
                               RadiusTopLeft: =0
                               RadiusTopRight: =0
                             Children:
-                              - Container2:
+                              - About screen - container for nformation:
                                   Control: GroupContainer@1.3.0
                                   Variant: AutoLayout
                                   Properties:
@@ -136,7 +136,7 @@ Screens:
                                     RadiusTopRight: =0
                                     Width: =200
                                   Children:
-                                    - HtmlText1_1:
+                                    - About screen - information:
                                         Control: HtmlViewer@2.1.0
                                         Properties:
                                           AutoHeight: =true
