@@ -103,7 +103,7 @@ This option provides a fully managed experience where Term Buddy operates within
 
 ### Option 2: Customer-Managed Installation
 
-![Architecture Default](./assets/architecture-advanced.png)
+![Architecture Advanced](./assets/architecture-advanced.png)
 
 For organizations requiring full control over their infrastructure, this option enables deployment within the customer’s Azure Entra ID tenant using Bicep deployment scripts provided by the developer.
 - **Azure Subscription Required:** An active Azure subscription is necessary to host Term Buddy and related services.
