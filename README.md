@@ -4,7 +4,8 @@
 
 **Term Buddy** is your AI-powered terminology assistant. It provides clear term definitions, generates quizzes, and offers real-world term usage examples to enhance learning and comprehension.  
 
-![Example of a good preview](assets/term-buddy-settings.png)
+![Term Buddy - Analytics page](assets/term-buddy-settings.png)
+[Watch full video](https://youtu.be/pSs8emZ-llY)
 
 ## Applies to
 
